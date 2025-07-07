@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para ti, mi amor ❤️</title>
+    <title>Para mi pequeña chiquis ❤️</title>
     <style>
         * {
             margin: 0;
@@ -32,12 +32,23 @@
         .container {
             text-align: center;
             background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
+            padding: 30px 20px;
             border-radius: 25px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 100%;
             max-width: 600px;
             position: relative;
             animation: fadeInScale 2s ease-out;
+            margin: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+                margin: 5px;
+                border-radius: 20px;
+            }
         }
 
         @keyframes fadeInScale {
@@ -53,9 +64,24 @@
 
         h1 {
             color: #d63384;
-            font-size: 2.5em;
-            margin-bottom: 30px;
+            font-size: 2.2em;
+            margin-bottom: 25px;
             animation: heartbeat 2s ease-in-out infinite;
+            line-height: 1.2;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
         }
 
         @keyframes heartbeat {
@@ -64,11 +90,26 @@
         }
 
         .message {
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 1.6;
             color: #495057;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             animation: slideInUp 1.5s ease-out 0.5s both;
+        }
+        
+        @media (max-width: 768px) {
+            .message {
+                font-size: 1em;
+                margin-bottom: 25px;
+                padding: 0 5px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .message {
+                font-size: 0.95em;
+                margin-bottom: 20px;
+            }
         }
 
         @keyframes slideInUp {
@@ -115,8 +156,14 @@
         .floating-heart {
             position: absolute;
             color: #ff69b4;
-            font-size: 1.5em;
+            font-size: 1.2em;
             animation: float 4s infinite ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-heart {
+                font-size: 1em;
+            }
         }
 
         @keyframes float {
@@ -147,6 +194,21 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
             animation: slideInUp 1.5s ease-out 1s both;
+            touch-action: manipulation;
+        }
+        
+        @media (max-width: 768px) {
+            .button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
         }
 
         .button:hover {
@@ -166,8 +228,14 @@
         .star {
             position: absolute;
             color: #ffd700;
-            font-size: 1.2em;
+            font-size: 1em;
             animation: twinkle 3s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .star {
+                font-size: 0.8em;
+            }
         }
 
         @keyframes twinkle {
@@ -178,9 +246,24 @@
         .love-quote {
             font-style: italic;
             color: #6c757d;
-            margin-top: 30px;
-            font-size: 1.1em;
+            margin-top: 25px;
+            font-size: 1em;
             animation: slideInUp 1.5s ease-out 1.5s both;
+        }
+        
+        @media (max-width: 768px) {
+            .love-quote {
+                font-size: 0.9em;
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .love-quote {
+                font-size: 0.85em;
+                margin-top: 15px;
+            }
         }
     </style>
 </head>
@@ -189,7 +272,7 @@
     <div class="stars"></div>
     
     <div class="container">
-        <h1>Para ti, mi amor</h1>
+        <h1>Para ti, mi chiquis</h1>
         <div class="message">
             Eres lo más hermoso que me ha pasado en la vida.
             <span class="heart">❤️</span>
@@ -262,12 +345,15 @@
                 transform: translate(-50%, -50%);
                 background: rgba(255, 107, 107, 0.95);
                 color: white;
-                padding: 20px 40px;
+                padding: 20px 30px;
                 border-radius: 25px;
-                font-size: 1.5em;
+                font-size: 1.3em;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 z-index: 1000;
                 animation: surpriseAnimation 3s ease-out;
+                max-width: 90%;
+                text-align: center;
+                word-wrap: break-word;
             `;
             
             document.body.appendChild(surprise);
